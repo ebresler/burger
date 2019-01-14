@@ -1,8 +1,5 @@
-//ORM FUNCTIONS THAT TAKE IN INPUTS AND TURNS THEM INTO SQL DATBASE COMMANDS.
-
 var connection = require('../config/connection.js');
 
-//ORM
 function printQuestionMarks(num) {
     var arr = [];
 
@@ -14,7 +11,6 @@ function printQuestionMarks(num) {
 }
 
 function objToSql(ob) {
-    //COLUMN=VALUE, COLUMN2=VALUE2,....
     var arr = [];
 
     for (var key in ob) {
@@ -34,8 +30,6 @@ var orm = {
                 cb(result);
         });
     },
-    //VALS IS AN ARRAY OF VALUES THAT WE WANT TO SAVE TO COLS
-    //COLS ARE THE COUMNS WE WANT TO INSERT THE VALUES INTO
 
     create: function(table, cols, vals, cb) {
         console.log(vals);
@@ -55,8 +49,6 @@ var orm = {
             cb(result);
         });
     },
-    //objColVals WOULD BE THE COLUMNS AND VALUES THAT YOU WANT TO UPDATE 
-    //AN EXAMPLE OF objColVals WOULD BE {NAME: RAMIRO, TIRED: TRUE}
 
     devour: function(table, objColVals, condition, cb) {
         var queryString = 'UPDATE ' + table;

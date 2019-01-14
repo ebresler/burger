@@ -1,5 +1,3 @@
-//CREATE THE MySQL CONNECTION AND EXPORT FOR THE DATABASE BY THE ORM 
-
 var mysql = require('mysql');
 var connection;
 

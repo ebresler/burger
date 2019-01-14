@@ -1,5 +1,3 @@
-//CALL THE O.R.M FUNCTIONS USING BURGER SPECIFIC INPUT FOR THE O.R.M.
-
 var orm = require('../config/orm.js');
 
 var burgers = {
@@ -8,7 +6,6 @@ var burgers = {
 			cb(res);
 		});
 	},
-	//COLS AND VALS ARE ARRAYS	
 	create: function(cols, vals, cb) {
 		orm.create('Burgers', cols, vals, function (res){
 			cb(res);
